@@ -183,7 +183,7 @@ let g:Gtags_Auto_Update = 1
 "map ^[] :GtagsCursor<CR>
 "call denite#custom#default_action('gtags_completion', 'list_definitions')
 "noremap <Leader>r :execute 'Denite gtags_path:'.expand("%:t:r").((expand ("%:e") == "cpp") ? '.h' : '.cpp').' -immediately'<CR>
-noremap <Leader>r :Denite file_rec -input=`expand('%:t:r').((expand("%:e")=="cpp") ? ".h" : ".cpp")` -immediately<CR> 
+noremap <Leader>r :Denite file_rec -input=`expand('%:t:r').((expand("%:e")=="cpp") ? ".h" : (expand("%:e")=="cc" ? ".hh" : (expand("%:e")=="h" ? ".cpp" : ".cc")))` -immediately<CR> 
 "noremap <Leader>r :execute 'Denite file_rec -input='.expand("%:t:r").((expand ("%:e") == "cpp") ? '.h' : '.cpp').''''<CR>
 
 
