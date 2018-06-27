@@ -1,3 +1,15 @@
 [submodule "bundle/denite.nvim"]
 	path = bundle/denite.nvim
 	url = https://github.com/Shougo/denite.nvim.git
+[submodule "bundle/denite-gtags"]
+	path = bundle/denite-gtags
+	url = https://github.com/ozelentok/denite-gtags.git
+[submodule "bundle/nerdtree"]
+	path = bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "bundle/vim-airline"]
+	path = bundle/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
+[submodule "bundle/vim-fugitive"]
+	path = bundle/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
