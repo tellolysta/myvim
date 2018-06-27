@@ -15,6 +15,8 @@ curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 #git clone https://github.com/tpope/vim-fugitive.git
 #
 #cd $dir
-
+echo "submodules init & cloning"
+git submodule init
+git submodule update
 ln -s vimrc ~/.vimrc
 
