@@ -8,35 +8,34 @@ let g:python3_host_prog = '/usr/bin/python3.5'
 let mapleader = ','
 
 "tagbar"
-nmap <C-l> :TagbarToggle <CR>
+"nmap <C-l> :TagbarToggle <CR>
 set clipboard=unnamedplus
 map <C-\> :tab split<CR>:exec("tjump ".expand("<cword>"))<CR>
-nnoremap gh :tabfirst<CR>
-nnoremap gk :tabnext<CR>
-nnoremap gj :tabprev<CR>
-nnoremap gl :tablast<CR>
-noremap <Leader>h :noh <CR>
-noremap <Leader>q :quit<CR>
-noremap <Leader>E :qa!<CR>
-noremap <Leader>w :w<CR>
-noremap <Leader>e :e %:h<CR>
-nmap <Leader>s :split <CR>
-nmap <Leader>v :vs <CR>
-nmap <Leader>t :tab split <CR>
-nmap <Leader>b :ConqueTerm bash <CR>
-nmap <c-j> <c-w>j
-nmap <c-k> <c-w>k
-nmap <c-h> <c-w>h
-nmap <c-l> <c-w>l
-nnoremap <Leader>d :bnext <CR>
-nnoremap <Leader>a :bprev <CR>
-nmap <Leader>x :%s/\s\+$// <CR>
-nmap <Leader>z :%s/\v(\n\s*){2,}/\r\r/ <CR>
-nmap <Leader>g :Gdiff ~1 <CR>
+nnoremap gh :tabfirst<CR>           "first tab
+nnoremap gk :tabnext<CR>            "next tab
+nnoremap gj :tabprev<CR>            "prev tab
+nnoremap gl :tablast<CR>            "las tab
+noremap <Leader>h :noh <CR>         "remove highlight
+noremap <Leader>q :quit<CR>         "quit file
+noremap <Leader>E :qa!<CR>          "force quit all files(don't save changes)
+noremap <Leader>w :w<CR>            "save changes in file
+noremap <Leader>e :e %:h<CR>        "open directory with current opened file
+nmap <Leader>s :split <CR>          "split
+nmap <Leader>v :vs <CR>             "vertival split
+nmap <Leader>t :tab split <CR>      "new tab with file
+nmap <c-j> <c-w>j                   "move to window down
+nmap <c-k> <c-w>k                   "move to window up
+nmap <c-h> <c-w>h                   "move to window left
+nmap <c-l> <c-w>l                   "move to window righl
+nnoremap <Leader>d :bnext <CR>      "next file from buffer
+nnoremap <Leader>a :bprev <CR>      "prev file from buffer
+nmap <Leader>x :%s/\s\+$// <CR>     "remove trailing spaces
+nmap <Leader>z :%s/\v(\n\s*){2,}/\r\r/ <CR>     "split two clean lines to one
+nmap <Leader>g :Gdiff ~1 <CR>       "diff to previous version on file
 vmap <c-c> "+y <CR>
 "DENITE
-nnoremap Uf :Denite file_rec<CR> " -start-insert file_rec<CR>
-nnoremap Ub :Denite buffer<CR>
+nnoremap Uf :Denite file_rec<CR> " -start-insert file_rec<CR>       "find file
+nnoremap Ub :Denite buffer<CR>                                      "find file in buffer
 nnoremap Ud :Denite gtags/def
 
 set clipboard=unnamedplus
@@ -146,8 +145,6 @@ let g:airline_symbols.space = "\ua0"
 let g:airline_symbols.space = "\u3000"
 set laststatus=2
 
-
-
 "function! HeaderToggle() " bang for overwrite when saving vimrc
 "let file_path = expand("%")
 "let file_name = expand("%<")
@@ -183,8 +180,7 @@ let g:Gtags_Auto_Update = 1
 "map ^[] :GtagsCursor<CR>
 "call denite#custom#default_action('gtags_completion', 'list_definitions')
 "noremap <Leader>r :execute 'Denite gtags_path:'.expand("%:t:r").((expand ("%:e") == "cpp") ? '.h' : '.cpp').' -immediately'<CR>
-noremap <Leader>r :Denite file_rec -input=`expand('%:t:r').((expand("%:e")=="cpp") ? ".h" : (expand("%:e")=="cc" ? ".hh" : (expand("%:e")=="h" ? ".cpp" : ".cc")))` -immediately<CR> 
+noremap <Leader>r :Denite file_rec -input=`expand('%:t:r').((expand("%:e")=="cpp") ? ".h" : (expand("%:e")=="cc" ? ".hh" : (expand("%:e")=="h" ? ".cpp" : ".cc")))` -immediately<CR>
 "noremap <Leader>r :execute 'Denite file_rec -input='.expand("%:t:r").((expand ("%:e") == "cpp") ? '.h' : '.cpp').''''<CR>
-
 
 autocmd BufDelete * call airline#extensions#tabline#buflist#invalidate()
