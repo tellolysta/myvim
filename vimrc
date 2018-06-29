@@ -33,7 +33,7 @@ nnoremap <Leader>a :bprev <CR>
 nmap <Leader>x :%s/\s\+$// <CR>
 nmap <Leader>z :%s/\v(\n\s*){2,}/\r\r/ <CR>
 nmap <Leader>g :Gdiff ~1 <CR>
-
+vmap <c-c> "+y <CR>
 "DENITE
 nnoremap Uf :Denite file_rec<CR> " -start-insert file_rec<CR>
 nnoremap Ub :Denite buffer<CR>
