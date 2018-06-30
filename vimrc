@@ -11,31 +11,55 @@ let mapleader = ','
 "nmap <C-l> :TagbarToggle <CR>
 set clipboard=unnamedplus
 map <C-\> :tab split<CR>:exec("tjump ".expand("<cword>"))<CR>
-nnoremap gh :tabfirst<CR>           "first tab
-nnoremap gk :tabnext<CR>            "next tab
-nnoremap gj :tabprev<CR>            "prev tab
-nnoremap gl :tablast<CR>            "las tab
-noremap <Leader>h :noh <CR>         "remove highlight
-noremap <Leader>q :quit<CR>         "quit file
-noremap <Leader>E :qa!<CR>          "force quit all files(don't save changes)
-noremap <Leader>w :w<CR>            "save changes in file
-noremap <Leader>e :e %:h<CR>        "open directory with current opened file
-nmap <Leader>s :split <CR>          "split
-nmap <Leader>v :vs <CR>             "vertival split
-nmap <Leader>t :tab split <CR>      "new tab with file
-nmap <c-j> <c-w>j                   "move to window down
-nmap <c-k> <c-w>k                   "move to window up
-nmap <c-h> <c-w>h                   "move to window left
-nmap <c-l> <c-w>l                   "move to window righl
-nnoremap <Leader>d :bnext <CR>      "next file from buffer
-nnoremap <Leader>a :bprev <CR>      "prev file from buffer
-nmap <Leader>x :%s/\s\+$// <CR>     "remove trailing spaces
-nmap <Leader>z :%s/\v(\n\s*){2,}/\r\r/ <CR>     "split two clean lines to one
-nmap <Leader>g :Gdiff ~1 <CR>       "diff to previous version on file
+"first tab
+nnoremap gh :tabfirst<CR>
+"next tab
+nnoremap gk :tabnext<CR>
+"prev tab
+nnoremap gj :tabprev<CR>
+"las tab
+nnoremap gl :tablast<CR>
+"remove highlight
+noremap <Leader>h :noh <CR>
+"quit file
+noremap <Leader>q :quit<CR>
+"force quit all files(don't save changes)
+noremap <Leader>E :qa!<CR>
+"save changes in file
+noremap <Leader>w :w<CR>
+"open directory with current opened file
+noremap <Leader>e :e %:h<CR>
+"split
+nmap <Leader>s :split <CR>
+"vertival split
+nmap <Leader>v :vs <CR>
+"new tab with file
+nmap <Leader>t :tab split <CR>
+"move to window down
+nmap <c-j> <c-w>j
+"move to window up
+nmap <c-k> <c-w>k
+"move to window left
+nmap <c-h> <c-w>h
+"move to window righl
+nmap <c-l> <c-w>l
+"next file from buffer
+nnoremap <Leader>d :bnext <CR>
+"prev file from buffer
+nnoremap <Leader>a :bprev <CR>
+"remove trailing spaces
+nmap <Leader>x :%s/\s\+$// <CR>
+"split two clean lines to one
+nmap <Leader>z :%s/\v(\n\s*){2,}/\r\r/ <CR>
+"diff to previous version on file
+nmap <Leader>g :Gdiff ~1 <CR>
 vmap <c-c> "+y <CR>
 "DENITE
-nnoremap Uf :Denite file_rec<CR> " -start-insert file_rec<CR>       "find file
-nnoremap Ub :Denite buffer<CR>                                      "find file in buffer
+"move in Denite window using ctrl+t ctrl+g
+"find file
+nnoremap Uf :Denite file_rec<CR> " -start-insert file_rec<CR>
+"find file in buffer
+nnoremap Ub :Denite buffer<CR>
 nnoremap Ud :Denite gtags/def
 
 set clipboard=unnamedplus
@@ -52,7 +76,7 @@ set nocompatible                  " Utawia tryb rozszerzony Vima, zamiast domyś
 set confirm                       " pytaj o potwierdzenie, zamiast odmawiać wykonania operacji
 set cursorline                    " podświetl aktualną linię
 "hi Cursorline term=none cterm=none ctermbg=233
-hi Cursorline term=none cterm=none ctermbg=17
+hi Cursorline term=none cterm=none ctermbg=48
 set laststatus=2                  "Zawsze pokazuj pasek statusu
 set lazyredraw                    "Nie przerysowuj ekranu podczas wykonywania makr, rejestrów itp
 set nu
