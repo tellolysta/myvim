@@ -6,7 +6,7 @@ let g:python3_host_prog = '/usr/bin/python3.5'
 
 :map <F11>  :sp tags<CR>:%s/^\([^	:]*:\)\=\([^	]*\).*/syntax keyword Tag \2/<CR>:wq! tags.vim<CR>/^<CR><F12>
 let mapleader = ','
-
+let g:gitgutter_terminal_reports_focus=0
 "tagbar"
 "nmap <C-l> :TagbarToggle <CR>
 set clipboard=unnamedplus
