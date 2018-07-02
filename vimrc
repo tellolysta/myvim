@@ -54,6 +54,7 @@ nmap <Leader>z :%s/\v(\n\s*){2,}/\r\r/ <CR>
 "diff to previous version on file
 nmap <Leader>g :Gdiff ~1 <CR>
 vmap <c-c> "+y <CR>
+
 "DENITE
 "move in Denite window using ctrl+t ctrl+g
 "find file
@@ -62,14 +63,22 @@ nnoremap Uf :Denite file_rec<CR> " -start-insert file_rec<CR>
 nnoremap Ub :Denite buffer<CR>
 nnoremap Ud :Denite gtags/def
 
+"NERD COMMENTER
+"basic use:
+"<leader>cc - comment line
+"<leader>cu - uncomment line
+
+
+
 set clipboard=unnamedplus
 "WYGLĄD I WYGODA
-syntax on                         " Włącza kolorowanie składni
+"syntax on                         " Włącza kolorowanie składni
+syntax enable
 set t_Co=256
 "colo darkblue
 "autocmd vimenter * colorscheme desert256  " zmienia schemat kolorów
-colorscheme inkpot
 set background=light
+colorscheme inkpot
 hi Normal ctermbg=none
 
 set nocompatible                  " Utawia tryb rozszerzony Vima, zamiast domyślnego, kompatybilnego z Vi
