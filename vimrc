@@ -85,7 +85,7 @@ set nocompatible                  " Utawia tryb rozszerzony Vima, zamiast domyś
 set confirm                       " pytaj o potwierdzenie, zamiast odmawiać wykonania operacji
 set cursorline                    " podświetl aktualną linię
 "hi Cursorline term=none cterm=none ctermbg=233
-hi Cursorline term=none cterm=none ctermbg=48
+hi Cursorline term=none cterm=none ctermbg=58
 set laststatus=2                  "Zawsze pokazuj pasek statusu
 set lazyredraw                    "Nie przerysowuj ekranu podczas wykonywania makr, rejestrów itp
 set nu
