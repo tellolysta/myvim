@@ -4,12 +4,11 @@ let g:clang_cpp_options = '-std=c++11 -stdlib=libc++'
 let g:python_host_prog = '/usr/bin/python2.7'
 let g:python3_host_prog = '/usr/bin/python3.5'
 
-:map <F11>  :sp tags<CR>:%s/^\([^	:]*:\)\=\([^	]*\).*/syntax keyword Tag \2/<CR>:wq! tags.vim<CR>/^<CR><F12>
+":map <F11>  :sp tags<CR>:%s/^\([^	:]*:\)\=\([^	]*\).*/syntax keyword Tag \2/<CR>:wq! tags.vim<CR>/^<CR><F12>
 let mapleader = ','
 let g:gitgutter_terminal_reports_focus=0
 "tagbar"
 "nmap <C-l> :TagbarToggle <CR>
-set clipboard=unnamedplus
 map <C-\> :tab split<CR>:exec("tjump ".expand("<cword>"))<CR>
 "first tab
 nnoremap gh :tabfirst<CR>
@@ -72,20 +71,18 @@ nnoremap Ud :Denite gtags/def
 
 set clipboard=unnamedplus
 "WYGLĄD I WYGODA
-"syntax on                         " Włącza kolorowanie składni
-syntax enable
+syntax on                         " Włącza kolorowanie składni
+"syntax enable
 set t_Co=256
 "colo darkblue
 "autocmd vimenter * colorscheme desert256  " zmienia schemat kolorów
 set background=light
-colorscheme inkpot
+"colorscheme inkpot
 hi Normal ctermbg=none
 
 set nocompatible                  " Utawia tryb rozszerzony Vima, zamiast domyślnego, kompatybilnego z Vi
 set confirm                       " pytaj o potwierdzenie, zamiast odmawiać wykonania operacji
 set cursorline                    " podświetl aktualną linię
-"hi Cursorline term=none cterm=none ctermbg=233
-hi Cursorline term=none cterm=none ctermbg=58
 set laststatus=2                  "Zawsze pokazuj pasek statusu
 set lazyredraw                    "Nie przerysowuj ekranu podczas wykonywania makr, rejestrów itp
 set nu
@@ -215,5 +212,12 @@ let g:Gtags_Auto_Update = 1
 "noremap <Leader>r :execute 'Denite gtags_path:'.expand("%:t:r").((expand ("%:e") == "cpp") ? '.h' : '.cpp').' -immediately'<CR>
 noremap <Leader>r :Denite file_rec -input=`expand('%:t:r').((expand("%:e")=="cpp") ? ".h" : (expand("%:e")=="cc" ? ".hh" : (expand("%:e")=="h" ? ".cpp" : ".cc")))` -immediately<CR>
 "noremap <Leader>r :execute 'Denite file_rec -input='.expand("%:t:r").((expand ("%:e") == "cpp") ? '.h' : '.cpp').''''<CR>
-
+let c_no_curly_error=1
+colorscheme codedark
+hi Cursorline term=none cterm=none ctermbg=236
 autocmd BufDelete * call airline#extensions#tabline#buflist#invalidate()
+let g:cpp_class_scope_highlight = 1
+let g:cpp_member_variable_highlight = 1
+let g:cpp_class_decl_highlight = 1
+let g:cpp_experimental_simple_template_highlight = 1
+let g:cpp_concepts_highlight = 1
