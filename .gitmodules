@@ -23,5 +23,5 @@
 	path = bundle/syntax
 	url = https://github.com/octol/vim-cpp-enhanced-highlight.git
 [submodule "vim-code-dark"]
-	path = bundle/vim-code-dark
+	path = vim-code-dark
 	url = https://github.com/tomasiser/vim-code-dark.git
